@@ -7,3 +7,5 @@ composer.lock
 .env
 
 .phpunit.result.cache
+
+*.php
