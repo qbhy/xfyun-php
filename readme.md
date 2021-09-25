@@ -52,3 +52,8 @@ dump($result);// 识别结果
 ]
  */
 ```
+> 关于该 sdk 的任何问题都可以加QQ群：873213948 向我提问
+
+https://github.com/qbhy/xfyun-php  
+qbhy0715@qq.com  
+
