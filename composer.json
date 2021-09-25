@@ -21,7 +21,6 @@
     "require-dev": {
         "illuminate/support": "^8.61",
         "symfony/var-dumper": "^5.3",
-        "phpoption/phpoption": "^1.8",
         "vlucas/phpdotenv": "^5.3",
         "phpunit/phpunit": "^9.5",
         "hyperf/di": "^2.2",
