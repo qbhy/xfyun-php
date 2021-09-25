@@ -1,0 +1,28 @@
+{
+    "name": "qbhy/xfyun",
+    "description": "科大讯飞sdk",
+    "require": {
+        "php": "^7.0 | ^8.0",
+        "hanson/foundation-sdk": "^5.0",
+        "ext-json": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Qbhy\\XFYun\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "qbhy",
+            "email": "qbhy0715@qq.com"
+        }
+    ],
+    "require-dev": {
+        "illuminate/support": "^8.61",
+        "symfony/var-dumper": "^5.3",
+        "phpoption/phpoption": "^1.8",
+        "vlucas/phpdotenv": "^5.3",
+        "phpunit/phpunit": "^9.5"
+    }
+}
