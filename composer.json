@@ -24,5 +24,12 @@
         "phpoption/phpoption": "^1.8",
         "vlucas/phpdotenv": "^5.3",
         "phpunit/phpunit": "^9.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Qbhy\\XFYun\\LaravelServiceProvider"
+            ]
+        }
     }
 }
