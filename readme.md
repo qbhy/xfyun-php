@@ -1,22 +1,46 @@
 # qbhy/xfyun
+
 科大讯飞 php sdk，支持 laravel/lumen、hyperf
 
 ## 安装 - install
+
 ```bash
 $ composer require qbhy/xfyun
 ```
 
+## 配置 - configuration
+
+```
+XFYUN_DEBUG=true
+XFYUN_APP_ID=your app id
+XFYUN_APP_KEY=your app key
+```
+
+> laravel 和 hyperf 都只需要添加以上配置即可。需要注意的是 laravel5.5以下的版本需要在 config/app.php 添加 `Qbhy\XFYun\LaravelServiceProvider`
+
 ## 使用 - usage
+
 ```php
 <?php
 
-$app = new Qbhy\XFYun\App([
-    'debug' => env('XFYUN_DEBUG', true),
-    'app_id' => env('XFYUN_APP_ID'),
-    'app_key' => env('XFYUN_APP_KEY'),
+// laravel 环境下直接注入即可
+function(\Qbhy\XFYun\App $xfyun) {
+    // todo
+}
+
+// hyperf 环境下注入 HyperfXFYun 即可，用法完全一样
+function(\Qbhy\XFYun\HyperfXFYun $xfyun) {
+    // todo
+}
+
+// 其他 php 框架请自行实例化
+$xfyun = new Qbhy\XFYun\App([
+    'debug' => true,
+    'app_id' => 'XFYUN_APP_ID',
+    'app_key' => 'XFYUN_APP_KEY',
 ]);
 
-$result = $app->voice_extension->identifySong('https://xfyun-doc.cn-bj.ufileos.com/1537253485018707/qlzw2.wav');
+$result = $xfyun->voice_extension->identifySong('https://xfyun-doc.cn-bj.ufileos.com/1537253485018707/qlzw2.wav');
 dump($result);// 识别结果
 /**
  array:4 [
@@ -52,6 +76,7 @@ dump($result);// 识别结果
 ]
  */
 ```
+
 > 关于该 sdk 的任何问题都可以加QQ群：873213948 向我提问
 
 https://github.com/qbhy/xfyun-php  
